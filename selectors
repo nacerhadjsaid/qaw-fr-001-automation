@@ -1,0 +1,47 @@
+selectors:
+
+notes:
+avoid alphanumeric value (dynamic value)
+both single and double quotes are accepted 
+linkText and partialLinkText works with links only
+* can replace tagName
+can leave blank tagName in cssSelector
+cssSelector is 10 times faster than xpath
+
+Selectors:
+ID ex: id="twotabsearchtextbox"
+name ex: name="field-keywords"
+tagName ex: input
+className ex: class="nav-input nav-progressive-attribute"
+linkText (links only) ex: Epic Deals
+partialLinkText (links only) ex: ic Dea
+
+CSS Selectors
+tagName[attribute='value'] ex: input[id='twotabsearchtextbox']
+tagName[attribute*='value'] ex: input[id*='twotabsea']
+in case of id: #idValue ex: #twotabsearchtextbox
+in case of className: .classNameValue ex: .nav-input.nav-progressive-attribute
+NB: replace all spaces by a . in the classNameValue
+cssSelector tag:nth-child(index) tag:nth-child(index) tag:nth-child(index) (parent/child transverse) ex: form[id='nav-search-bar-form'] div div div div i
+get table web elements:
+cssSelector tr:nth-child(index) - (for rows)
+cssSelector td:nth-child(index) - (for columns)
+cssSelector tr:nth-child(index) td:nth-child(index) - (for cross row/column)
+
+xpath
+//tagName[@attribute='value'] ex: //input[@id='twotabsearchtextbox']
+//tagName[contains(@attribute,'value')] ex: //input[contains(@id,'twotabsea')]
+//tagName[text()='HTML Inner text']
+//tagName[contains(text(),'HTML Inner text')]
+(xpath)[index]
+
+
+parent/child relationship
+xpath/tag[index]/tag[index]/tag[index]
+
+child/parent relationship
+xpath/../../..
+
+sibling
+xpath/following-sibling::tag[index]
+xpath/preceding-sibling::tag[index]
